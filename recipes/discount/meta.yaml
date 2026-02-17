@@ -13,6 +13,8 @@ source:
 build:
   noarch: generic
   number: 0
+  run_exports:
+    - {{ pin_subpackage("discount", max_pin="x.x") }}
 
 requirements:
   run:
@@ -28,5 +30,5 @@ about:
   license: GPL-3.0-only
   license_file: LICENSE.txt
   license_family: GPL3
-  summary: Discount is a large scale k-mer counting and indexing tool. It is very memory efficient and runs on both standalone computers and in cluster/cloud environments. It is based on Apache Spark.
+  summary: Discount is a very scalable k-mer counting and indexing tool based on Apache Spark.
   dev_url: https://github.com/jtnystrom/Discount
