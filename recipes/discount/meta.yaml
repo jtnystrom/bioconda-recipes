@@ -32,7 +32,7 @@ about:
   license_family: GPL3
   summary: Discount is a very scalable k-mer counting and indexing tool based on Apache Spark.
   dev_url: https://github.com/jtnystrom/Discount
-  doc_url: https://github.com/jtnystrom/Discount/blob/${{ version }}/README.md
+  doc_url: https://github.com/jtnystrom/Discount/blob/v{{ version }}/README.md
 
 extra:
   identifiers: 
