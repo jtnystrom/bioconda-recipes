@@ -13,6 +13,8 @@ sed -i 's#/set/spark/dir#'"$PREFIX#" discount-shell.sh
 
 sed -i 's#DISCOUNT_HOME="$(dirname -- "$(readlink "${BASH_SOURCE}")")"#DISCOUNT_HOME='"$PACKAGE_HOME#" discount.sh
 sed -i 's#DISCOUNT_HOME="$(dirname -- "$(readlink "${BASH_SOURCE}")")"#DISCOUNT_HOME='"$PACKAGE_HOME#" discount-shell.sh
+sed -i 's#DISCOUNT_HOME="$(dirname -- "$(readlink "${BASH_SOURCE}")")"#DISCOUNT_HOME='"$PACKAGE_HOME#" discount-aws.sh
+sed -i 's#DISCOUNT_HOME="$(dirname -- "$(readlink "${BASH_SOURCE}")")"#DISCOUNT_HOME='"$PACKAGE_HOME#" discount-gcloud.sh
 
 cp log4j.properties discount.sh discount-gcloud.sh discount-aws.sh discount-shell.sh $PACKAGE_HOME
 cp target/scala-2.12/Discount-assembly-${PKG_VERSION}.jar $PACKAGE_HOME/target/scala-2.12

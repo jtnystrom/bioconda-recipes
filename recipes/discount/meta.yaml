@@ -7,14 +7,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/jtnystrom/Discount/releases/download/v{{ version }}/Discount-{{version}}_Spark3.1.zip
+  url: https://github.com/jtnystrom/Discount/releases/download/v{{ version }}/Discount-{{ version }}_Spark3.1.zip
   sha256: {{ sha256 }}
 
 build:
   noarch: generic
   number: 0
   run_exports:
-    - {{ pin_subpackage("discount", max_pin="x.x") }}
+    - {{ pin_subpackage("discount", max_pin="x") }}
 
 requirements:
   run:
@@ -26,9 +26,13 @@ test:
     - discount.sh -h
 
 about:
-  home: https://jnpsolutions.io/software/
+  home: https://github.com/jtnystrom/Discount
   license: GPL-3.0-only
   license_file: LICENSE.txt
   license_family: GPL3
   summary: Discount is a very scalable k-mer counting and indexing tool based on Apache Spark.
   dev_url: https://github.com/jtnystrom/Discount
+  doc_url: https://github.com/jtnystrom/Discount/blob/${{ version }}/README.md
+
+extra:
+  identifiers: doi:10.1093/bioinformatics/btab156
